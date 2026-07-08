@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>자가스크립트 DOM(document Object Model)</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/dom01.css">
+    <script src="./scripts/dom01.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="top">
+                <h1><a href="#">ToDo</a></h1>
+                <div class="right">
+                    <a href="#" class="search"><img src="" alt="검색"></a>
+                    <a href="#" class="menu"><img src="" alt="메뉴"></a>
+                </div>
+            </div>
+            <nav>
+                <a href="#" class="active all">All(3)</a>
+                <a href="#" class="today">Today(0)</a>
+            </nav>
+        </header>
+        <main>
+            <ul class="todo_list">
+                <li>
+                    <sapn class="date">05.12</sapn>
+                    <em class="list">매일 책 15분 읽기 목표</em>
+                </li>
+                <li>
+                    <sapn class="date">05.13</sapn>
+                    <em class="list">과제하기</em>
+                </li>
+                <li>
+                    <sapn class="date">05.14</sapn>
+                    <em class="list">영어 단어 외우기</em>
+                </li>
+                <li>
+                    <sapn class="date">05.15</sapn>
+                    <em class="list">운동하기</em>
+                </li>
+            </ul>
+            <button id="write_btn"><img src="#" alt="글쓰기창띄우기"></button>
+            <div class="popup">
+                <input type='text' class="user_write" placeholder="add a new task"> <!-- input type='text' 한 줄 일 때만 사용 2줄 이상은 다른 태그 사용 -->
+                <button id="btn"><img src="#" alt="글쓰기 등록"></button>
+            </div>
+            <div class="popup_bg"></div>
+        </main>
+    </div>
+</body>
+</html>
