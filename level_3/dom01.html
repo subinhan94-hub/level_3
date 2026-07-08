@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>자가스크립트 DOM(document Object Model)</title>
+    <title>자바스크립트 DOM(document Object Model)</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/dom01.css">
-    <script src="./scripts/dom01.js"></script>
+    <script src="./scripts/dom01.js" defer></script>
+    <!-- script의 defer속성 : body 태그를 모두 읽고 script 나중에 처리하라는 속성 -->
 </head>
 <body>
     <div id="wrap">
@@ -45,12 +46,12 @@
                     <em class="list">운동하기</em>
                 </li>
             </ul>
-            <button id="write_btn"><img src="#" alt="글쓰기창띄우기"></button>
-            <div class="popup">
+            <button id="write_btn" onclick="popupShow()"><img src="#" alt="글쓰기창띄우기"></button>
+            <div class="write_popup">
                 <input type='text' class="user_write" placeholder="add a new task"> <!-- input type='text' 한 줄 일 때만 사용 2줄 이상은 다른 태그 사용 -->
                 <button id="btn"><img src="#" alt="글쓰기 등록"></button>
             </div>
-            <div class="popup_bg"></div>
+            <div class="popup_bg" onclick="popupHide()"></div>
         </main>
     </div>
 </body>
