@@ -61,3 +61,40 @@
     `position:absolute; left right top botton 등의 위치 좌표 추가작성`
 `}`
 * after, before가 적용된 선택자에 `position:relative`기준잡기
+# form 태그
+## form태그와 action, method
+* form - 검색, 로그인, 회원가입 등의 특정 주제로 묶여있는 그룹
+    * (아래) 폼 내부에서 사용할 수 있는 태그 (블록)
+    * filedset - 폼 내부에서 묶어주는 역할
+    * legend - 묶은 역할이 어떤 주제인지 알려주는 제목
+* action - 그룹에 작성 또는 선택된 사용자 정보를 전달하는 서버 주소
+* method - 데이터를 보내는 전송 방식(get, post(보안))
+## input 태그와 type
+* input - 사용자가 입력, 선택할 때 작성하는 시작 태그 (type 필수)
+    * type : text, password, number, email, search, date, time, url
+    * 위에 없는 type은 대부분 text로 처리하고 나머지 name으로 구분한다.
+### 추가적인 속성
+* placeholder : 입력창 안에 보여지는 글 (글 쓰면 사라진다.)
+* autofocus : 페이지가 읽혀지면 커서가 깜박거린다.
+* autocomplete : 자동완성 기능 -> on/off 설정해야함
+* required : 필수 입력 값
+* readonly : 읽기 전용
+* disabled : 비활성화 (입력이 불가능해짐)
+* maxlength / minlength : 최대 몇 글자 제한 / 최소 몇 글자 제한
+### input 선택 속성
+* radio : 여러 개 중 하나를 선택해야 할 때
+* checkbox : 여러 개 중 동시에 선택할 때
+* select : 목록에 전체 틀
+* option : 내부에서 만드는 선택지
+## textarea
+* 긴 글을 입력할 때 사용하는 태그
+## name
+* action으로 저장된 사이트 서버 위치에 사용자가 입력한 데이터를 전송할 때 구분하는 데이터 명칭
+* 이름 tom, 아이디 tom 값만 보고 구분을 정확히 못하는 경우 name 필수
+* userName => tom, userId => tom `name=userName`
+* 선택 양식에서는 name의미를 그룹 명으로 사용, 위 작성 내용은 입력 양식 해당
+## value
+* 입력방식 : 처음부터 입력된 초기 값 (쇼핑몰의 수량 1)
+* 선택양식 : 위 name처럼 데이터 구분 명칭
+## id, class속성
+* js, css에서 구분하기 위한 디자인 또는 동적 프로그래밍 용도 이름
