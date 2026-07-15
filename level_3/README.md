@@ -28,15 +28,27 @@
     * 객체의 속성을 읽기
     * `a.href;`
     * `video.src;`, `video.autoplay`
+    * `span.textContent;` //span태그 안 내용을 읽는다. <span>내용</span>
+    * `input.value;` //value는 input 전용 속성으로 다른 태그에 사용불가
 * `객체.속성 = '값';`
     * 객체의 속성 값을 대입한다
     * 대입 시 기존값이 있으면 ? 기본 값 자동 제거되고 새로운 값 대입
     * `a.href = './reset.css';`
     * `video.src = './dog.ma4';`
     * `video.autoplay = 0;`
+    * `<span>0</span>` 
+        * `span.textContent=1` // span 원래 내용은 제거하고 1 새로 대입
+        * `span.textContent= span.textContent+1;` // 기존 span에 1을 더해 대입한다.
+    * `<input> type="text" value="1">`
+        * `input.value = 2;` // input의 내용 1->2로 변경
+        * `input.value = input.value +2;` // 기존 input에 2을 더해 대입한다.
 * `객체.함수();`
     * 객체를 실행한다
     *`객체.함수() = '값';` (X)
+* `이벤트="함수();"`
+    * 이벤트 동작 시 특정 함수를 실행한다.
+    * `<태그 onclick="func1();">` // 함호출
+    * 위 작성 전 준비사항 : `function func1(){반복실행명령}` // 함수생성
 ## DOM(document objet model)
 ### JS에서 제어하고 싶은 HTML 요소가 있을 경우 순서
 1. 제어하고 싶은 HTML 수와 클래스, id 등 확인
